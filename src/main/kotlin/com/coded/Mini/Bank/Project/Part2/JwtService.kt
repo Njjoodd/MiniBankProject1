@@ -11,7 +11,7 @@ class JwtService{
     fun generateToken(username: String): String {
         return Jwts.builder()
             .setSubject(username)
-            .setIssuedAt(java.util.Date()).
+            .setIssuedAt(Date()).
             setExpiration(Date(System.currentTimeMillis() + 1000 * 60 * 60 * 10)) //for 10 hours
             .signWith(secretKey)
             .compact()
