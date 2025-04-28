@@ -18,6 +18,7 @@ data class Transaction(
     @JoinColumn(name = "destination_account")
     val destinationAccount: Account? = null,
     val amount: BigDecimal = BigDecimal.ZERO
-) {
-    constructor() : this(0, null, null, BigDecimal.ZERO)
-}
+)
+// {
+//    constructor() : this(0, null, null, BigDecimal.ZERO)
+//}

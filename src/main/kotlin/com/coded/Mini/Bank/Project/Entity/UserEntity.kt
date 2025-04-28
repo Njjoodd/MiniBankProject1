@@ -14,4 +14,5 @@ data class User(
 
     @Column(nullable = false)
     var password: String? = null
+
 )

@@ -14,8 +14,13 @@ data class KYC(
     val lastName: String? = null,
     val dateOfBirth: LocalDate? = null,
     val salary: BigDecimal? = null,
-) {
-    constructor() : this(null, null, null,
-        null, null
-    )
-}
+)
+@OneToOne
+@MapsId
+@JoinColumn(name = "id")
+val user: User? = null
+//{
+//    constructor() : this(null, null, null,
+//        null, null
+//    )
+//}

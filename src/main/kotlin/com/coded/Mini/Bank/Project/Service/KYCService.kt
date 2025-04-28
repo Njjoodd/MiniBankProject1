@@ -16,11 +16,11 @@ class KYCService(
 
     fun createOrUpdateKYC(userId: Long, firstName: String,
                           lastName: String, dob: LocalDate, salary: BigDecimal): KYC {
-        val user = userRepo.findById(userId).orElseThrow {
-            IllegalArgumentException("User with id $userId not found")
+        userRepo.findById(userId).orElseThrow {
+            IllegalArgumentException("User not found with id: $userId")
         }
         val kyc = KYC(
-            id = user.id,
+            id = userId,
             firstName = firstName,
             lastName = lastName,
             dateOfBirth = dob,
@@ -36,5 +36,6 @@ class KYCService(
         }
     }
 
-    fun getAllKYC(): List<KYC> = kycRepo.findAll()
+    fun getAllKYC(): List<KYC>
+    { return kycRepo.findAll()}
 }

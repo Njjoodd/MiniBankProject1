@@ -12,7 +12,7 @@ class UserService (private val userRepository: UserRepository) {
         return userRepository.save(user)
     }
 
-    fun getAllUsers(): List<User> {
-        return userRepository.findAll()
-    }
+//    fun getAllUsers(): List<User> {
+//        return userRepository.findAll()
+//    }
 }

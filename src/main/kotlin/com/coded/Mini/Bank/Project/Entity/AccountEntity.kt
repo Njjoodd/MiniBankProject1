@@ -4,9 +4,9 @@ import jakarta.persistence.*
 import java.math.BigDecimal
 import java.util.*
 
-enum class AccountType {
-    Savings, Current, Business, Checking
-}
+//enum class AccountType {
+//    Savings, Current, Business, Checking
+//}
 
 @Entity
 @Table(name = "accounts")
@@ -21,18 +21,18 @@ data class Account(
 
     var balance: BigDecimal = BigDecimal.ZERO,
     var isActive: Boolean = true,
-    val accountNumber: String = UUID.randomUUID().toString(),
+    val accountNumber: String = UUID.randomUUID().toString())
 
-    @Enumerated(EnumType.STRING)
-    @Column(name = "account_type")
-    val accountType: AccountType = AccountType.Savings
-) {
-    constructor() : this(
-        id = null,
-        user = null,
-        balance = BigDecimal.ZERO,
-        isActive = true,
-        accountNumber = UUID.randomUUID().toString(),
-        accountType = AccountType.Savings
-    )
-}
+//    @Enumerated(EnumType.STRING)
+//    @Column(name = "account_type")
+//    val accountType: AccountType = AccountType.Savings
+//) {
+//    constructor() : this(
+//        id = null,
+//        user = null,
+//        balance = BigDecimal.ZERO,
+//        isActive = true,
+//        accountNumber = UUID.randomUUID().toString(),
+//        accountType = AccountType.Savings
+//    )
+//}
