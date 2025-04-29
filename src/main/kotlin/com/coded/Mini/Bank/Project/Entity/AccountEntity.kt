@@ -7,7 +7,7 @@ import java.util.*
 //enum class AccountType {
 //    Savings, Current, Business, Checking
 //}
-
+//
 @Entity
 @Table(name = "accounts")
 data class Account(

@@ -20,3 +20,4 @@ data class RegisterUserRequest(
     val username: String,
     val password: String
 )
+//

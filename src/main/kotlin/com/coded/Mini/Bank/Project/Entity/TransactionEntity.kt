@@ -22,3 +22,4 @@ data class Transaction(
 // {
 //    constructor() : this(0, null, null, BigDecimal.ZERO)
 //}
+//

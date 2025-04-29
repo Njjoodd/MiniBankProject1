@@ -11,7 +11,7 @@ class TransactionService(
     private val accountRepo: AccountRepository,
     private val txRepo: TransactionRepository
 ) {
-
+    //
     fun transfer(sourceAccountNumber: String, destinationAccountNumber: String, amount: BigDecimal): BigDecimal {
         val source = accountRepo.findByAccountNumber(sourceAccountNumber)
             ?: throw IllegalArgumentException("Source account not found: $sourceAccountNumber")
@@ -35,6 +35,6 @@ class TransactionService(
     }
 
     fun getAllTransactions(): List<Transaction> {
-    return txRepo.findAll()
+        return txRepo.findAll()
     }
 }
